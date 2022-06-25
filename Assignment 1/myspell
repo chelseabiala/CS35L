@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cat $1 |  tr 'A-Z' 'a-z'| tr -d '.,?!();:' | tr -cs 'A-Za-z' '[\n*]' | sort -u > input.words
+cat sorted.words | tr 'A-Z' 'a-z' | tr -d '.,?!();:' | tr -cs 'A-Za-z' '[\n*]' | sort -u > sorted2.words
+comm -23 input.words sorted2.words

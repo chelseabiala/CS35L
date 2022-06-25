@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat > log
+lines=($(grep "^Date:" log | grep -Eo "((\-.*)|(\+.*))$" | sort -gu))
+for i in ${lines[@]}
+do
+   echo $i $(grep "^Date:" log | grep -c "\\${i}$")
+done

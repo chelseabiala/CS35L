@@ -1,0 +1,13 @@
+Chelsea Biala
+405 579 079
+
+Exercise 2.1
+1. Expression to compute 3^(4^5): (expt 3 (expt 4 5))
+2. Expression to compute number of bits to represent 3^(4^5): (* (expt 4 5) (log 3 2)), answer is 1624 (rounded up)
+3. C-h k C-h k opens up a description in the help buffer of the C-h k binding itself. This is because the original command triggers describe-key, which will give a descrption of the command you type next. It is "an interactive compiled Lisp function in 'help.el'"
+4. C-h k M-SPC opens up a description in the help buffer of the M-SPC command, for the same reasons as shown above (C-h k desribes the function of whatever keystroke is typed afterward). The M-SPC command deletes all whitespace (spaces and tabs) around the point it is invoked, leaving one space left
+5. The general way to do M-SPC is the function just-one-space, which takes an argument N and leaves that many spaces left around the point at which it is invoked. If N is negative, it will delete that many newlines in addition to surrounding spaces and tabs.
+
+Homework
+1. When invoked on an empty file, randline will return an IndexError, "list index is out of range."
+2. This particular file is not compatible with python3; running it as such will return a syntax error within the file. This is because python3 is backward incompatible with python2. 

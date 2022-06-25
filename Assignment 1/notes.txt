@@ -1,0 +1,72 @@
+Chelsea Biala 405579079
+
+General:
+-lab4.drib is missing because the session was interrupted and incomplete (started over in lab5.drib)
+-1.1-1.4 complete, slightly different files because exer2.diff was not as it should be
+
+Lab 1.5:
+1. mv and sh are both in /usr/bin
+command: which mv, which sh
+2. ar creates, modifies, and extracts from archives
+pr converts text files for printing
+command: ls /usr/bin to find commnds, man ar, man pr, to find what they do
+3. executes emacs, will open up the editor
+command: which /usr/local/cs/bin/emacs to find executable, ran command to find what it does
+4. /usr/bin/gcc is 8.4.1, gcc is 11.2.0. They are different because gcc points to /usr/locl/cs/bin, which is likely updated more often because it is use more often on the server
+command: /usr/bin/gcc -v, gcc -v, which gcc
+5. chmod u+sx changes permission to allow the owner of a file to set user or group ID on execution and to execute a file, chmod o-w removes permissions of other users not in the file's group to write on the file.
+command: man chmod (other details listed in manual)
+6. the directories that have been modifie are as follows:
+/usr/local/cs
+/usr/local/cs/.del
+/usr/local/cs/.del/automake-1.16.4
+emacs n/usr/local/cs/bin
+/usr/local/cs/gdb-11.1
+/usr/local/cs/gdb-11.1/include
+/usr/local/cs/gdb-11.1/include/sim
+/usr/local/cs/gdb-11.1/include/gdb
+/usr/local/cs/gdb-11.1/lib
+/usr/local/cs/gdb-11.1/bin
+/usr/local/cs/gdb-11.1/share
+/usr/local/cs/gdb-11.1/share/info
+/usr/local/cs/gdb-11.1/share/man
+/usr/local/cs/gdb-11.1/share/man/man5
+/usr/local/cs/gdb-11.1/share/man/man1
+/usr/local/cs/gdb-11.1/share/gdb
+/usr/local/cs/gdb-11.1/share/gdb/system-gdbinit
+/usr/local/cs/gdb-11.1/share/gdb/syscalls
+/usr/local/cs/automake-1.16.5
+/usr/local/cs/automake-1.16.5/share
+/usr/local/cs/automake-1.16.5/share/doc
+/usr/local/cs/automake-1.16.5/share/doc/automake
+/usr/local/cs/automake-1.16.5/share/automake-1.16
+/usr/local/cs/automake-1.16.5/share/automake-1.16/am
+/usr/local/cs/automake-1.16.5/share/automake-1.16/Automake
+/usr/local/cs/automake-1.16.5/share/aclocal-1.16
+/usr/local/cs/automake-1.16.5/share/aclocal-1.16/internal
+/usr/local/cs/automake-1.16.5/share/aclocal
+/usr/local/cs/automake-1.16.5/share/info
+/usr/local/cs/automake-1.16.5/share/man
+/usr/local/cs/automake-1.16.5/share/man/man1
+/usr/local/cs/automake-1.16.5/bin
+/usr/local/cs/share/info
+/usr/local/cs/share/man/man1
+/usr/local/cs/share/man/man5
+/usr/local/cs/src/automake
+/usr/local/cs/src/automake/RCS
+/usr/local/cs/src/gdb
+/usr/local/cs/src/gdb/RCS
+
+command: find /usr/local/cs -type d -mtime -28 (4 weeks in days)
+7. 318. I did not include them here for readability.
+command: which find (locate directory of find, which was /usr/bin), find /usr/bin -type l | wc -l (find symbolic links in this directory)
+8. The oldest file is libcrypt.so.1.1.0
+command: cd /usr/lib64 to change directory, ls -lt to determine oldest file
+9. 6 commands
+command: emacs to enter emacs, C-h a transpose to search for commands with transpose
+10. Yank reinserts the most recent killed text and can be invoked with C-y.
+command: emacs to enter emacs, C-h f yank to learn about the command
+11. The directory listing of emacs shows the root directories (. and ..) while ls -l does not. They also have different coloration.
+command: cd /usr/bin to set directory, ls -l to output files, emacs to enter emacs, M-x dired to output files in emacs
+12. 3 processes, running for 00:07:58,1-02:18:07, 00:44:18, 0.0%, 3.1%, 0.0% CPU cycles respectively
+command: ps -C xagt to list processes named xagt, find PIDs, and times running. ps aux -C xagt to find %CPU cycles being taken up 

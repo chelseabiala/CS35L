@@ -1,0 +1,59 @@
+Chelsea Biala
+405 579 079
+
+Modify Makefile
+-Added new file to git: tester.sh
+-Wrote a shell script that runs randall and checks the length of output
+-Script works as intended but outputs additional command not found errors, will go back and fix this later
+COMMIT
+
+Split randall Implementation
+-Created all new files and added them to the git
+-Options.h and options.c do not contain much at first, will later process command line input
+-Added writebytes function to output files
+-Added all functions under "Hardware Implementation" to rand64_hw.h and .c
+-Removed static keywords and fixed small bugs
+COMMIT
+
+Add Options
+-Added a switch statement to randall.c that parses the options, storing input and output options into variables to use later an delivering error messages for invalid options
+-Added if statements and boolean flags to check different input and output options
+COMMIT
+
+Add /F Input Option
+-Created new function in rand64-sw that changed the source file for random input
+-Called this function if boolean flag for useFile mentioned above is true
+
+Add mrand48-r Option
+-Added new mrand48-r.h and .c files to handle new implementation
+-Created init and fini functions in .h
+COMMIT
+-Researched srand and mrand functions, seeded random value with current time in buffer
+-Combined resulting long ints into one long long
+-Changed randall.c to use these functions instead of other hardware implementations
+COMMIT
+
+Add -o N Option
+-In randall.c, if stdio flag false, allocated bytes in buffer using malloc
+-Input random bytes into buffer
+-Used a while loop to output these random bytes in certain intervals
+
+Time results:
+for time dd if=/dev/urandom ibs=8192 obs=8192 count=16384 >/dev/null:
+real	0m0.924s
+user	0m0.010s
+sys	0m0.909s
+for time ./randall 133562368 >/dev/null:
+real	0m3.883s
+user	0m3.855s
+sys	0m0.013s
+for time ./randall 133562368 | cat >/dev/null:
+real	0m4.076s
+user	0m3.953s
+sys	0m0.261s
+for time ./randall 133562368 >rand.data:
+real	0m5.793s
+user	0m3.897s
+sys	0m0.116s
+
+I did indeed forget about the existence of options.h and options.c and accidentally implemented the options in randall.c. Though I may not have enough time to fix this I am aware of it

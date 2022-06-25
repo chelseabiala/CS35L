@@ -1,0 +1,1 @@
+When git branch is called on the regular repository, it displays only the *master branch, while the eggert version displays several other branches (seen, next, main, maint, todo). All of these can be seen on the GitHub browser, the *master is the default.

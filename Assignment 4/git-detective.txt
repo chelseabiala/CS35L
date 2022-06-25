@@ -1,0 +1,12 @@
+The commit in which this change happened is 8174627b3d32dc80cb477b3fa46971955f26c6b2.
+
+The change was authored by Đoàn Trần Công Danh. The code that fixed it is as follows:
+
+* dd/diff-files-unmerged-fix:
+      diff-lib: ignore paths that are outside $cwd if --relative asked
+
+and the branch 'dd/diff-files-unmerged-fix' was merged into maint.
+
+These are detailed in the merge commit I found by looking below:
+
+I discovered this change by looking first at the git log of v2.33.1, and then at the release notes because I realized the changes listed corresponded with the order of the commits below. I then scrolled until I found the change required. I then looked at the two commits merged and found this one with the changes.

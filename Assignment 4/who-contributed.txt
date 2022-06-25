@@ -1,0 +1,8 @@
+
+First, I tried using grep '<the phrase>' git log, but this did not work as many later files contained the phrase after it was already added.
+
+I then tried using git log -S '<the phrase>' --source --all, which searches for any commit where the phrase was added or removed. The --source and --all explored every branch and found where the phrase originated.
+
+Finally, I added --reverse to the original command, because they should have been sorted in reerse chronological order and I wanted to see the commit where the phrase was first added. There was only one, so this only confirmed the answer I already had.
+
+When looked at in the browser, the commit says the sentence was originally introduced on December 21, 1995, in commit c12b432741eed9a422fbf99fa27af6e7a941d88b committed on July 18th, 2012.. Though Arthur David Olson authored this commit, it is labelled Eggert changes, which is rather ambiguous.
